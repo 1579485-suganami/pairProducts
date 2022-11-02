@@ -4,26 +4,41 @@ function omikuzi() {
     .then(res => res.json())
     .then(json => {
         
-        
+        const kuziList = ["大吉", "吉", "中吉", "小吉", "狂", "大狂", "最狂",]
+        const kuziComent = [
+            "今日はなにもかも上手くいくでしょう",
+            "何かいいことがあるかも？",
+            "いいことあるってw",
+            "残念www",
+            "やばいっすねw",
+            "大人しく帰りましょう",
+            "🟠r🟠k🟠さんにご注意を",
+        ]
+        const rmdNum = Math.floor(Math.random() * kuziList.length);
+        const kuziEl = document.createElement("div");
+        // kuziEl.className = "pokeClass";
+        kuziEl.innerText ="今日の運勢は" + kuziList[rmdNum] + "です" + "\n" + kuziComent[rmdNum];
+        kuziEl.style.color = "white"
+
         const nameEl = document.createElement("div");
-        nameEl.innerText = json.name;
+        nameEl.innerText = "lucky Pokemon: " + json.name;
+        nameEl.style.color = "white"
         
         const imgEl = document.createElement('img');
+
         imgEl.src = json.sprites.front_default;
-        imgEl.width = 200;
-        
+        imgEl.width = 300;
+        imgEl.style.borderRadius = "150px";
+        const rgbArr = [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256)]
+        imgEl.style.backgroundColor = `rgb(${rgbArr[0]}, ${rgbArr[1]}, ${rgbArr[2]})`
         
         const pokemonEl = document.getElementById("luckypokemon")
         pokemonEl.innerText = ""
         pokemonEl.width = 300
-        pokemonEl.left = "50%"
-        pokemonEl.top = "50%"
-        pokemonEl.transform = "translateY(-50%) translateX(-50%)"
-        // pokemonEl.webkit-transform = "translateY(-50%) translateX(-50%)"
+        pokemonEl.append(kuziEl);
         pokemonEl.append(nameEl);
         pokemonEl.append(imgEl);
     } )
     
 };
-console.log(omikuzi());
 
