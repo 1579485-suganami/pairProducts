@@ -1,5 +1,5 @@
 function omikuzi() {
-    const rmdPokeNum = () =>  Math.floor(Math.random() * 905);
+    const rmdPokeNum = () =>  Math.floor(Math.random() * 905) + 1;
     const res = fetch("https://pokeapi.co/api/v2/pokemon/" + rmdPokeNum())
     .then(res => res.json())
     .then(json => {
