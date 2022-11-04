@@ -5,7 +5,8 @@
 by Yannys, PairProject BTC-3
 
 ## はじめに
-[お布施ができます！！！]("https://1579485-suganami.github.io/pairProducts/")
+**お布施ができます！！！**
+[お布施はこちらから](https://1579485-suganami.github.io/pairProducts/)
 
 
 ## 機能
@@ -14,7 +15,7 @@ by Yannys, PairProject BTC-3
 
 ## 備考
 * ポケモンAPIを使用し、キャラクターの名前と画像をランダムで表示しています。 
-[ポケモンAPIはこちら]("https://pokeapi.co/")
+[ポケモンAPIはこちら](https://pokeapi.co/)
 * 905種類のポケモンに対応しています。
 * ポケモンの画像の背景色をランダムに変更します。
  
